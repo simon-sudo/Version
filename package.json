@@ -6,6 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/simon-sudo/Version.git"
@@ -17,7 +22,10 @@
   },
   "homepage": "https://github.com/simon-sudo/Version#readme",
   "devDependencies": {
-    "cz-conventional-changelog": "^3.2.0"
+    "@commitlint/cli": "^9.0.1",
+    "@commitlint/config-conventional": "^9.0.1",
+    "cz-conventional-changelog": "^3.2.0",
+    "husky": "^4.2.5"
   },
   "config": {
     "commitizen": {
